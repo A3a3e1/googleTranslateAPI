@@ -63,7 +63,7 @@ public class TranslateSample {
           .setApplicationName(APPLICATION_NAME).build();
       
       List<String> arg0 = new ArrayList<String>();
-      arg0.add("<DOCTYPE HTML><html lang=\"en-x-mtfrom-zh\"><head></head><title></title><body>英国和<font size=\"1\">美国</font>政府分别谴责了在<font size=\"2\">中国</font><font size=\"3\">新疆</font>乌鲁木齐早市发生针对无辜平民的恐怖袭击.</body></html></DOCTYPE>");
+      arg0.add("<DOCTYPE HTML><html lang=\"en-x-mtfrom-zh\"><head></head><title></title><body>Бои под Волновахой обернулись для армии Украины самым большим числом жертв за время спецоперации: власти заявили о 16 погибших</body></html></DOCTYPE>");
       com.google.api.services.translate.Translate.Translations.List a = client.translations().list(arg0, "en");
       TranslationsListResponse b = a.execute();
       List<TranslationsResource> c = b.getTranslations();
