@@ -63,17 +63,20 @@ public class TranslateSample {
           .setApplicationName(APPLICATION_NAME).build();
       
       List<String> arg0 = new ArrayList<String>();
-      String s = "Чинчон – маленький городок недалеко от Мадрида, ";
+      String s = "我 爱 北 京 天 安 门";
       StringBuilder news = new StringBuilder();
       
       String[] tokens = s.split(" ");
-      int i = 0;
+      int i = 1;
+      
       for (String  token: tokens){
-    	  news.append("<font size=\""+(i++)+"\">"+token+"</font>");
+    	  news.append("<font font=\""+(i++)+"\">"+token+"</font>");
       }
-      arg0.add("<DOCTYPE HTML><html lang=\"en-x-mtfrom-ru\"><head></head><title></title><body>"+
+      arg0.add("<DOCTYPE HTML><html lang=\"en-x-mtfrom-zh\"><head></head><title></title><body>"+
       		news.toString()
+//    		  s
     		  +"</body></html></DOCTYPE>");
+      System.out.println(arg0);
       com.google.api.services.translate.Translate.Translations.List a = client.translations().list(arg0, "en");
       TranslationsListResponse b = a.execute();
       List<TranslationsResource> c = b.getTranslations();
